@@ -1,0 +1,16 @@
+[
+{
+  "modid": "test_mod",
+  "name": "Test Mod",
+  "description": "Example test mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Alex Koehn"],
+  "credits": "Me",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
