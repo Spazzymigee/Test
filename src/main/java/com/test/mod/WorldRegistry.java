@@ -28,11 +28,15 @@ public class WorldRegistry {
     {
 		 GameRegistry.register(testBlock);
 		 GameRegistry.register(testItemBlock);
+
+		 testBlock.setCreativeTab(WorldRegistry.tabTest);
     }
 	
 	public static void RegisterItems()
     {
 		GameRegistry.register(testItem);
+		
+		testItem.setCreativeTab(WorldRegistry.tabTest);
     }
 		
 	public static CreativeTabs tabTest = new CreativeTabs("tabTest") {
