@@ -3,3 +3,5 @@ tile.testBlock.name=Test Block
 item.testItem.name=Test Item
 
 itemGroup.tabTest=Test Mod
+
+test_mod.config.title=Test Mod Configuration

@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = Reference.MODID, name=Reference.NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MODID, name=Reference.NAME, version = Reference.VERSION,  guiFactory = Reference.GUI_FACTORY_CLASS)
 public class Main
 {
 	@Instance(value = Reference.MODID)

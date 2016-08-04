@@ -9,6 +9,7 @@ public class Reference {
 	
     public static final String CLIENT_PROXY_CLASS = "com.test.mod.proxy.ClientProxy";
     public static final String COMMON_PROXY_CLASS = "com.test.mod.proxy.CommonProxy";
+    public static final String GUI_FACTORY_CLASS = "com.test.mod.config.GuiFactory";
 	
     public static final class Blocks
     {
