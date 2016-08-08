@@ -20,6 +20,9 @@ public class ConfigGui extends GuiConfig {
 	}
 
 	//Requires Java 8 or Higher!!!
+	//will need to set this manually in gradle or it wont compile!
+	
+		//returns a list of your config file, i'm not entirely sure but you need this!
 	private static List<IConfigElement> getConfigElements() {
 		return Config.config.getCategoryNames().stream()
 				.map(categoryName -> new ConfigElement(Config.config.getCategory(categoryName).setLanguageKey(Reference.MODID + ".config." + categoryName)))

@@ -23,8 +23,10 @@ public class ClientProxy extends CommonProxy{
     public void init(FMLInitializationEvent e) {
         super.init(e);
         
+        //registers the textures
         RegisterBlockTextures(WorldRegistry.testBlock, 0);
         
+        //registers the textures
         RegisterItemTextures(WorldRegistry.testItem, 0);
     }
 
@@ -34,6 +36,7 @@ public class ClientProxy extends CommonProxy{
     }
     
     
+    //grabs the block and meta and looks for the corresponding resource location, slightly different for items than for blocks
 	public static void RegisterBlockTextures(Block block, int meta){
 		Item item = Item.getItemFromBlock(block);		
 		ModelLoader.registerItemVariants(item, new ModelResourceLocation(item.getRegistryName(),"inventory"));
@@ -41,6 +44,7 @@ public class ClientProxy extends CommonProxy{
 		
 	}	
 	
+    //grabs the block and meta and looks for the corresponding resource location, slightly different for items than for blocks
 	public static void RegisterItemTextures(Item item, int meta){		
 		ModelLoader.registerItemVariants(item, new ModelResourceLocation(item.getRegistryName(),"inventory"));
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(item.getRegistryName(),"inventory"));	

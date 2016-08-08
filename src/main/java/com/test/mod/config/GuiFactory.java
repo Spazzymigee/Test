@@ -9,24 +9,19 @@ import net.minecraftforge.fml.client.IModGuiFactory;
 public class GuiFactory implements IModGuiFactory{
  
     @Override
-      public void initialize(Minecraft minecraftInstance) {
+      public void initialize(Minecraft minecraftInstance) {}
  
-      }
- 
+    //Return your config gui class!
       @Override
       public Class<? extends GuiScreen> mainConfigGuiClass() {
         return ConfigGui.class;
       }
  
       @Override
-      public Set<RuntimeOptionCategoryElement> runtimeGuiCategories() {
-        return null;
-      }
+      public Set<RuntimeOptionCategoryElement> runtimeGuiCategories() {return null;}
  
       @Override
-      public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {
-        return null;
-      }
+      public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {return null;}
  
    
 }

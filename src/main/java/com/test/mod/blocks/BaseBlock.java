@@ -12,6 +12,7 @@ public class BaseBlock extends Block
     public BaseBlock(Material material)
     {
         super(material);
+        //I don't know why this doesn't work but it should...
         this.setCreativeTab(WorldRegistry.tabTest);
     }
 }

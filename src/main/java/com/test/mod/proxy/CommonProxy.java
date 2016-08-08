@@ -14,8 +14,11 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent e) {
 		
+		//i have no idea what this does?? Listens for changes in config maybe...
 		MinecraftForge.EVENT_BUS.register(Config.instance);
+		//creates new config file
 		Config.init(e.getSuggestedConfigurationFile());
+		//looks at config and updates variables (I think)
 	    Config.syncConfig();
 	}
 

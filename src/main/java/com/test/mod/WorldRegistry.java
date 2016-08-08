@@ -19,29 +19,39 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @GameRegistry.ObjectHolder(Reference.MODID)
 public class WorldRegistry {
 	
+	//creating the block and ItemBlock
 	public final static BaseBlock testBlock = new BlockTest();
 	public final static ItemBlock testItemBlock = (ItemBlock) new ItemBlock(testBlock).setRegistryName(testBlock.getRegistryName());
 
+	//creating the item
 	public static final BaseItem testItem = new ItemTest();
 
 	public static void RegisterBlocks()
     {
+		//registering the blocks, don't forget to register the ItemBlock as well!
 		 GameRegistry.register(testBlock);
 		 GameRegistry.register(testItemBlock);
 
+		//It won't add to creative tab without this line for some reason
 		 testBlock.setCreativeTab(WorldRegistry.tabTest);
     }
 	
 	public static void RegisterItems()
     {
+		//registering the item
 		GameRegistry.register(testItem);
 		
+		
+		//It won't add to creative tab without this line for some reason
 		testItem.setCreativeTab(WorldRegistry.tabTest);
     }
-		
+	
+	//creates the creative tab
 	public static CreativeTabs tabTest = new CreativeTabs("tabTest") {
 		    @Override
 		    @SideOnly(Side.CLIENT)
+		    
+		    //sets the icon for the tab
 		    public Item getTabIconItem() {
 		        return Items.COAL;
 		    }
